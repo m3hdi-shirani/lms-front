@@ -10,6 +10,7 @@ interface ProblemDetails {
 interface BadRequestError extends ProblemDetails {}
 
 interface UnauthorizedError extends ProblemDetails {}
+interface AccessDeniedError extends ProblemDetails {}
 
 interface ValidationError extends ProblemDetails {}
 
@@ -24,10 +25,11 @@ type ApiError =
   | NetworkError
   | NotFoundError
   | UnhandledError
-  | UnauthorizedError
+  | AccessDeniedError
   | ValidationError;
 
 export type {
+  AccessDeniedError,
   ApiError,
   BadRequestError,
   NetworkError,

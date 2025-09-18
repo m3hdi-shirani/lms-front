@@ -12,6 +12,8 @@ const httpService = axios.create({
   headers: {
     "Content-Type": "application/json",
   },
+  withCredentials: true,
+  withXSRFToken: true,
 });
 
 httpService.interceptors.response.use(
@@ -91,4 +93,9 @@ async function deleteData(
   return await apiBase(url, options);
 }
 
-export { createData, deleteData, readData, updateData };
+//handle await httpService.get("/sanctum/csrf-cookie");
+function getCsrfCookie() {
+  return httpService.get("/sanctum/csrf-cookie");
+}
+
+export { createData, deleteData, getCsrfCookie, readData, updateData };

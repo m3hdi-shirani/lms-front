@@ -1,4 +1,5 @@
 import {
+  AccessDeniedError,
   ApiError,
   BadRequestError,
   NetworkError,
@@ -27,8 +28,15 @@ export const notFoundErrorStrategy: ApiErrorHandler = (errorData) => {
 export const unauthorizedErrorStrategy: ApiErrorHandler = (errorData) => {
   throw {
     ...errorData,
-    detail: "دسترسی به سرویس مورد نظر امکان پذیر نمی باشد",
+    detail: "شما مجاز به دسترسی به این منبع نیستید",
   } as UnauthorizedError;
+};
+
+export const accessDeniedErrorStrategy: ApiErrorHandler = (errorData) => {
+  throw {
+    ...errorData,
+    detail: "شما اجازه دسترسی به این عملیات را ندارید",
+  } as AccessDeniedError;
 };
 
 export const unhandledExceptionStrategy: ApiErrorHandler = (errorData) => {
@@ -40,11 +48,10 @@ export const networkErrorStrategy = () => {
 };
 
 export const errorHandler: Record<number, ApiErrorHandler> = {
-  400: (errorData) =>
-    (errorData.errors ? validationErrorStrategy : badRequestErrorStrategy)(
-      errorData
-    ),
-  403: unauthorizedErrorStrategy,
+  400: badRequestErrorStrategy,
+  401: unauthorizedErrorStrategy,
+  403: accessDeniedErrorStrategy,
   404: notFoundErrorStrategy,
+  422: validationErrorStrategy,
   500: unhandledExceptionStrategy,
 };
