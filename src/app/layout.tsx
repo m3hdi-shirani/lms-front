@@ -1,15 +1,38 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
+import NextTopLoader from "nextjs-toploader";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const iranyekan = localFont({
+  src: [
+    {
+      path: "../../public/fonts/iranyekan/IRANYekanXFaNum-Light.woff2",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/iranyekan/IRANYekanXFaNum-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/iranyekan/IRANYekanXFaNum-Medium.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/iranyekan/IRANYekanXFaNum-DemiBold.woff2",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/iranyekan/IRANYekanXFaNum-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-iranyekan",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -23,10 +46,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="fa" dir="rtl" className={`dark ${iranyekan.variable}`}>
+      <body className="min-h-screen grid grid-rows-[80px_1fr_auto] dark:bg-base-100 dark:text-base-content">
+        <NextTopLoader showSpinner={false} color="var(--color-primary)" />
         {children}
       </body>
     </html>
