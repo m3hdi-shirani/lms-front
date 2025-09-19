@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* @import "../tailwind/index.css" layer(components); */
+@import "../tailwind/index.css" layer(components);
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -19,6 +19,7 @@
   --clb-c-error: oklch(0.71 0.16 22.15 / 1);
   --clb-c-gradient-first: oklch(0.83 0.18 160.17 / 1);
   --clb-c-gradient-second: oklch(0.68 0.15 238.98 / 1);
+  --clb-c-gray: oklch(0.27 0 0 / 1);
 
   --clb-c-base-25: oklch(0.36 0.02 254.1 / 1);
   --clb-c-base-50: oklch(0.31 0.02 254.14 / 1);
@@ -57,6 +58,7 @@
   --color-transparent: var(--clb-c-transparent);
   --color-white: var(--clb-c-white);
   --color-primary: var(--clb-c-primary);
+  --color-gray: var(--clb-c-gray);
   --color-primary-content: var(--clb-c-primary-content);
   --color-primary-focus: var(--clb-c-primary-focus);
   --color-secondary: var(--clb-c-secondary);
