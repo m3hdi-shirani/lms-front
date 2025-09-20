@@ -19,7 +19,6 @@
   --clb-c-error: oklch(0.71 0.16 22.15 / 1);
   --clb-c-gradient-first: oklch(0.83 0.18 160.17 / 1);
   --clb-c-gradient-second: oklch(0.68 0.15 238.98 / 1);
-  --clb-c-gray: oklch(0.27 0 0 / 1);
 
   --clb-c-base-25: oklch(0.36 0.02 254.1 / 1);
   --clb-c-base-50: oklch(0.31 0.02 254.14 / 1);
@@ -27,6 +26,7 @@
   --clb-c-base-100: oklch(0.25 0.02 252.42 / 1);
   --clb-c-base-200: oklch(0.23 0.01 253.1 / 1);
   --clb-c-base-300: oklch(0.21 0.01 254.09 / 1);
+  --clb-c-gray: oklch(0.27 0 0 / 1);
 
   --clb-c-base-content: oklch(0.75 0.02 264.44 / 1);
 
@@ -95,9 +95,9 @@
     font-family: var(--font-iranyekan);
   }
 
-  /* :lang(en) {
+  :lang(en) {
     font-family: var(--font-figtree);
-  } */
+  }
 }
 
 @layer utilities {
