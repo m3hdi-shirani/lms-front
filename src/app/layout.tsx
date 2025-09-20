@@ -47,7 +47,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa" dir="rtl" className={`dark ${iranyekan.variable}`}>
-      <body className="min-h-screen grid grid-rows-[80px_1fr_auto] dark:bg-base-100 dark:text-base-content">
+      <body className="min-h-screen grid grid-rows-[80px_1fr_auto] dark:bg-base-300 dark:text-base-content">
         <NextTopLoader showSpinner={false} color="var(--color-primary)" />
         {children}
       </body>
