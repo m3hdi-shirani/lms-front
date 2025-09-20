@@ -1,11 +1,9 @@
-import DialogBasic from "./_components/DialogBasic";
-import DrawerBasic from "./_components/DrawerBasic";
+import Header from "@/components/layout/Header";
 
 export default function Home() {
   return (
     <>
-      <DrawerBasic />
-      <DialogBasic />
+      <Header />
     </>
   );
 }
