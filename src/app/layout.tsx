@@ -1,3 +1,5 @@
+import Footer from "@/components/layout/Footer";
+import Header from "@/components/layout/Header";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import NextTopLoader from "nextjs-toploader";
@@ -49,7 +51,9 @@ export default function RootLayout({
     <html lang="fa" dir="rtl" className={`dark ${iranyekan.variable}`}>
       <body className="min-h-screen grid grid-rows-[80px_1fr_auto] dark:bg-base-300 dark:text-base-content">
         <NextTopLoader showSpinner={false} color="var(--color-primary)" />
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
