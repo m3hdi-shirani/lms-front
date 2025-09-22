@@ -19,7 +19,7 @@ export default async function Home() {
     <>
       <Header />
       <Hero />
-      <section className="container mx-auto px-4 py-8">
+      <section className="container mx-auto py-8">
         <CourseCardList courses={newestCourses} />
       </section>
     </>

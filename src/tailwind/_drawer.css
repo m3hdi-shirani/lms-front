@@ -1,5 +1,5 @@
 .drawer-content {
-  @apply bg-white dark:bg-gray shadow-xl absolute flex flex-col;
+  @apply bg-white dark:bg-base-300 dark:text-base-content shadow-xl absolute flex flex-col;
 
   &.vertical {
     @apply h-full;
@@ -11,7 +11,7 @@
 }
 
 .drawer-header {
-  @apply flex items-center justify-between py-4 px-6 border-b border-gray-200 dark:border-gray-700;
+  @apply flex items-center justify-between py-4 px-6 border-b border-gray-200 dark:border-base-75;
 }
 
 .drawer-body {
@@ -19,7 +19,7 @@
 }
 
 .drawer-footer {
-  @apply flex items-center justify-between py-4 px-6 border-t border-gray-200 dark:border-gray-700;
+  @apply flex items-center justify-between py-4 px-6 border-t border-gray-200 dark:border-base-75;
 }
 
 .drawer-open {
@@ -30,7 +30,7 @@
 
 .drawer-overlay {
   transition: all 0.3s ease-in-out;
-  @apply bg-black/80 inset-0 fixed z-30;
+  @apply bg-black/80 inset-0 fixed z-70;
 }
 
 .drawer-overlay-after-open {

@@ -18,6 +18,7 @@ const DrawerBasic = () => {
         onClose={closeDrawer}
         onRequestClose={closeDrawer}
         title="Drawer Title"
+        width={300}
       >
         ok
       </Drawer>
