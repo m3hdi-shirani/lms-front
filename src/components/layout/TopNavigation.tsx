@@ -14,7 +14,7 @@ const TopNavigation: React.FC = () => {
   const pathname = usePathname();
 
   return (
-    <ul className="xl:flex hidden gap-x-8 mr-12 ">
+    <ul className="hidden lg:flex gap-x-8 mr-12 ">
       {menuItems.map((item) => {
         const isActive = pathname === item.href;
 

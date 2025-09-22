@@ -38,8 +38,8 @@ const Drawer = (props: DrawerProps) => {
     headerClass,
     onClose,
     placement = "right",
-    height = 400,
-    width = 400,
+    height = 300,
+    width = 300,
 
     //inner
     children,
@@ -109,7 +109,7 @@ const Drawer = (props: DrawerProps) => {
       }}
       overlayClassName={{
         base: classNames(
-          "drawer-overlay",
+          "drawer-overlay z-60",
           overlayClassName as string,
           !showBackdrop && "bg-transparent"
         ),

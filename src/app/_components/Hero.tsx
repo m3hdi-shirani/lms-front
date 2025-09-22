@@ -20,7 +20,7 @@ const Hero = () => {
         <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
           آموزش برنامه‌نویسی حرفه‌ای و کاربردی در سایت
         </h1>
-        <p className="mt-10 px-48 text-lg font-medium text-base-content sm:text-xl/8 ">
+        <p className="mt-10  text-lg font-medium text-base-content sm:text-xl/8 ">
           سایت من، پلتفرم جامع آموزش برنامه‌نویسی، با ارائه دوره‌های تخصصی و
           به‌روز، مسیر یادگیری شما را هموار می‌کند. از صفر تا صد برنامه‌نویسی را
           با آموزش‌های کاربردی، پروژه‌های واقعی و پشتیبانی مستمر بیاموزید و به
