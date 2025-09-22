@@ -7,7 +7,7 @@ type CoursecardListProp = {
 
 const CourseCardList = ({ courses }: CoursecardListProp) => {
   return (
-    <div className="flex flex-wrap justify-center xl:justify-start gap-6 mt-10">
+    <div className="flex flex-wrap justify-center gap-8 mt-10">
       {courses.map((course) => (
         <CourseCard key={`course-${course.slug}`} {...course} />
       ))}

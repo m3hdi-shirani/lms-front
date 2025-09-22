@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <div className="relative isolate px-6 pt-14 lg:px-8">
+    <div className="container relative isolate px-6 pt-10 lg:px-8">
       <div
         aria-hidden="true"
         className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-10"
@@ -17,16 +17,16 @@ const Hero = () => {
       </div>
 
       <div className="mx-auto max-w-7xl py-32 sm:py-48 lg:py-56 text-center">
-        <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+        <h1 className="text-2xl sm:text-4xl  xl:text-6xl font-bold tracking-tight text-white">
           آموزش برنامه‌نویسی حرفه‌ای و کاربردی در سایت
         </h1>
-        <p className="mt-10  text-lg font-medium text-base-content sm:text-xl/8 ">
+        <p className="mt-10 text-md font-normal sm:text-lg sm:font-medium text-base-content ">
           سایت من، پلتفرم جامع آموزش برنامه‌نویسی، با ارائه دوره‌های تخصصی و
           به‌روز، مسیر یادگیری شما را هموار می‌کند. از صفر تا صد برنامه‌نویسی را
           با آموزش‌های کاربردی، پروژه‌های واقعی و پشتیبانی مستمر بیاموزید و به
           یک برنامه‌نویس حرفه‌ای تبدیل شوید.
         </p>
-        <div className="flex justify-center mt-10 gap-x-6">
+        <div className="flex flex-col md:flex-row md:justify-center mt-10 gap-6">
           <Button variant="primary" className="font-medium" animatedIcon={true}>
             شروع یادگیری
             <svg
