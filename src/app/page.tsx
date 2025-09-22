@@ -1,4 +1,3 @@
-import Header from "@/components/layout/Header";
 import { API_URL } from "@/config/global";
 import { CourseSummary } from "@/types/course-summery.interface";
 import CourseCardList from "./(courses)/_components/CourseCardList";
@@ -18,7 +17,6 @@ export default async function Home() {
 
   return (
     <>
-      <Header />
       <Hero />
       <section className="container mx-auto py-8">
         <CourseCardList courses={newestCourses} />
